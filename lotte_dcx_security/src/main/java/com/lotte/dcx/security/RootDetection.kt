@@ -134,6 +134,5 @@ class RootDetection {
             SLog.printStackTrace(e)
             result(false)
         }
-
     }
 }

@@ -2,7 +2,8 @@ package com.lotte.dcx.security
 
 import android.util.Log
 
-object SLog {
+//TODO: internal: 같은 패키지 내부만 접근 가능
+internal object SLog {
     /** Log Level Error **/
     fun e(tag: String, msg: String) {
         if (BuildConfig.DEBUG) {
