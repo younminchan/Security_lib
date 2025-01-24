@@ -1,2 +1,2 @@
 # Security_lib
-Android Security lib
+Lotte DCX - Android Security lib
