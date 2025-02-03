@@ -39,10 +39,17 @@ android {
     afterEvaluate {
         publishing {
             publications {
+//                create("maven-public", MavenPublication::class) {
+//                    groupId = "com.msg"
+//                    artifactId = "library"
+//                    version = "1.0.0"
+//                    from(components.getByName("java"))
+//                }
+
                 register<MavenPublication>("release") {
                     groupId = "com.lotte.dcx.security"
-                    artifactId = "dcx-security-lib"
-                    version = "1.0.1"
+                    artifactId = "lib"
+                    version = "1.0.4"
 
                     afterEvaluate {
                         from(components["release"])
@@ -50,11 +57,11 @@ android {
                 }
                 register<MavenPublication>("debug") {
                     groupId = "com.lotte.dcx.security"
-                    artifactId = "dcx-security-lib"
-                    version = "1.0.1"
+                    artifactId = "lib"
+                    version = "1.0.4"
 
                     afterEvaluate {
-                        from(components["release"])
+                        from(components["debug"])
                     }
                 }
             }
