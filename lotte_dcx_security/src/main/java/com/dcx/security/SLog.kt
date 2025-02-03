@@ -1,6 +1,7 @@
-package com.lotte.dcx.security
+package com.dcx.security
 
 import android.util.Log
+import com.lotte.dcx.security.BuildConfig
 
 //TODO: internal: 같은 패키지 내부만 접근 가능
 internal object SLog {

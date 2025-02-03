@@ -1,4 +1,4 @@
-package com.lotte.dcx.security
+package com.dcx.security
 
 import android.app.Activity
 import android.content.Context

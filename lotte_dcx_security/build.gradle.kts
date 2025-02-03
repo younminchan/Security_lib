@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.lotte.dcx.security"
+    namespace = "com.dcx.security"
     compileSdk = 34
 
     defaultConfig {
@@ -47,18 +47,18 @@ android {
 //                }
 
                 register<MavenPublication>("release") {
-                    groupId = "com.lotte.dcx.security"
+                    groupId = "com.dcx.security"
                     artifactId = "lib"
-                    version = "1.0.4"
+                    version = "1.0.5"
 
                     afterEvaluate {
                         from(components["release"])
                     }
                 }
                 register<MavenPublication>("debug") {
-                    groupId = "com.lotte.dcx.security"
+                    groupId = "com.dcx.security"
                     artifactId = "lib"
-                    version = "1.0.4"
+                    version = "1.0.5"
 
                     afterEvaluate {
                         from(components["debug"])
