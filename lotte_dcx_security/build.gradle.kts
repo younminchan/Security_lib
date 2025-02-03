@@ -2,7 +2,6 @@ plugins {
     //alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 
-
     //jitpack 배포
     id("com.android.library")
     id("maven-publish")
@@ -41,6 +40,15 @@ android {
         publishing {
             publications {
                 register<MavenPublication>("release") {
+                    groupId = "com.lotte.dcx.security"
+                    artifactId = "dcx-security-lib"
+                    version = "1.0.1"
+
+                    afterEvaluate {
+                        from(components["release"])
+                    }
+                }
+                register<MavenPublication>("debug") {
                     groupId = "com.lotte.dcx.security"
                     artifactId = "dcx-security-lib"
                     version = "1.0.1"
