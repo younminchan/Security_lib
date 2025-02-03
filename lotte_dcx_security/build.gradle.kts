@@ -49,7 +49,7 @@ android {
                 register<MavenPublication>("release") {
                     groupId = "com.dcx.security"
                     artifactId = "dcx-security-release"
-                    version = "1.0.5"
+                    version = "1.0.2"
 
 //                    afterEvaluate {
 //                        from(components["release"])
@@ -58,7 +58,7 @@ android {
                 register<MavenPublication>("debug") {
                     groupId = "com.dcx.security"
                     artifactId = "dcx-security-debug"
-                    version = "1.0.5"
+                    version = "1.0.2"
 
 //                    afterEvaluate {
 //                        from(components["debug"])
