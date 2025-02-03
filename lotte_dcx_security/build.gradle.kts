@@ -43,7 +43,7 @@ android {
                 register<MavenPublication>("release") {
                     groupId = "com.lotte.dcx.security"
                     artifactId = "dcx-security-lib"
-                    version = "1.0"
+                    version = "1.0.1"
 
                     afterEvaluate {
                         from(components["release"])
@@ -68,3 +68,10 @@ dependencies {
 
     implementation ("com.github.dcendents:android-maven-gradle-plugin:2.1")
 }
+
+/**
+ * jitpack.yml 파일추가
+ * jitpack은 기본적으로 Java8버전을 사용하는데
+ * 최근에는 8버전 이상을 사용하므로 lombok이슈를 해결위해 jitpack.yml에 Java 버전 명시
+ * 참고자료: https://swmobenz.tistory.com/42
+ * */
