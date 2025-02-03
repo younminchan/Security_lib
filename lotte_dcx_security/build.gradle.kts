@@ -1,7 +1,11 @@
 plugins {
     //alias(libs.plugins.android.application)
-    id("com.android.library")
     alias(libs.plugins.jetbrains.kotlin.android)
+
+
+    //jitpack 배포
+    id("com.android.library")
+    id("maven-publish")
 }
 
 android {
@@ -32,10 +36,25 @@ android {
     buildFeatures {
         buildConfig = true
     }
+
+    afterEvaluate {
+        publishing {
+            publications {
+                register<MavenPublication>("release") {
+                    groupId = "com.lotte.dcx.security"
+                    artifactId = "dcx-security-lib"
+                    version = "1.0"
+
+                    afterEvaluate {
+                        from(components["release"])
+                    }
+                }
+            }
+        }
+    }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -46,4 +65,6 @@ dependencies {
     //Coroutine
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    implementation ("com.github.dcendents:android-maven-gradle-plugin:2.1")
 }
