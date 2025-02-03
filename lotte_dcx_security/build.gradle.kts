@@ -51,18 +51,18 @@ android {
                     artifactId = "lib"
                     version = "1.0.5"
 
-                    afterEvaluate {
-                        from(components["release"])
-                    }
+//                    afterEvaluate {
+//                        from(components["release"])
+//                    }
                 }
                 register<MavenPublication>("debug") {
                     groupId = "com.dcx.security"
                     artifactId = "lib"
                     version = "1.0.5"
 
-                    afterEvaluate {
-                        from(components["debug"])
-                    }
+//                    afterEvaluate {
+//                        from(components["debug"])
+//                    }
                 }
             }
         }
