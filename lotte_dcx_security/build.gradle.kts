@@ -47,23 +47,17 @@ android {
 //                }
 
                 register<MavenPublication>("release") {
+                    from(components["release"])
                     groupId = "com.dcx.security"
                     artifactId = "dcx-security-release"
                     version = "1.0.2"
-
-//                    afterEvaluate {
-//                        from(components["release"])
-//                    }
                 }
-                register<MavenPublication>("debug") {
-                    groupId = "com.dcx.security"
-                    artifactId = "dcx-security-debug"
-                    version = "1.0.2"
-
-//                    afterEvaluate {
-//                        from(components["debug"])
-//                    }
-                }
+//                register<MavenPublication>("debug") {
+//                    from(components["debug"])
+//                    groupId = "com.dcx.security"
+//                    artifactId = "dcx-security-debug"
+//                    version = "1.0.2"
+//                }
             }
         }
     }
