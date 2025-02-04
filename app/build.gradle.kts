@@ -41,14 +41,13 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(project(":lotte_dcx_security"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-
+//    implementation(project(":lotte_dcx_security"))
 //    implementation(files("libs/lotte_dcx_security-debug.aar"))
-//    implementation(files("libs/lotte_dcx_security-release.aar"))
+    implementation(files("libs/lotte_dcx_security-release.aar"))
 //    implementation("com.github.younminchan.Security_lib:release:1.0.0")
 //    implementation(project(":dcx-security-release"))
 
