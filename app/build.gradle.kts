@@ -45,11 +45,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    /** lib프로젝트를 직접적으로 의존시키기 */
 //    implementation(project(":lotte_dcx_security"))
-//    implementation(files("libs/lotte_dcx_security-debug.aar"))
-    implementation(files("libs/lotte_dcx_security-release.aar"))
-//    implementation("com.github.younminchan.Security_lib:release:1.0.0")
-//    implementation(project(":dcx-security-release"))
 
-//    implementation("com.github.younminchan.Security_lib:dcx-security-release:1.0.1")
+    /** aar파일 형식으로 추가 */
+    implementation(files("libs/lotte_dcx_security-release.aar"))
 }

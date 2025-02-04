@@ -17,8 +17,12 @@ android {
     }
 
     buildTypes {
+        debug {
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -36,17 +40,18 @@ android {
         buildConfig = true
     }
 
+    /** jitpack 배포 설정 */
     afterEvaluate {
         publishing {
             publications {
                 /** 무슨 이유인지 모르겠지만, release, debug 함께 적용하면
-                 * jitpack에서 다운이 제대로 안되는 이슈가 있었음 */
+                 * jitpack에서 다운이 제대로 안되는 이슈가 있었음 (2개중 1개만 사용하기) */
 
                 register<MavenPublication>("release") {
                     from(components["release"])
                     groupId = "com.dcx.security"
-                    artifactId = "dcx-security-release"
-                    version = "1.0.3"
+                    artifactId = "release"
+                    version = "1.0.0"
                 }
 //                register<MavenPublication>("debug") {
 //                    from(components["debug"])
