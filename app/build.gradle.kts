@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.lotte.dcx.security"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.lotte.dcx.security"

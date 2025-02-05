@@ -49,9 +49,9 @@ android {
 
                 register<MavenPublication>("release") {
                     from(components["release"])
-                    groupId = "com.dcx.security"
-                    artifactId = "release"
-                    version = "1.0.0"
+                    groupId = "com.github.younminchan"
+                    artifactId = "lib"
+                    version = "1.0.2"
                 }
 //                register<MavenPublication>("debug") {
 //                    from(components["debug"])
