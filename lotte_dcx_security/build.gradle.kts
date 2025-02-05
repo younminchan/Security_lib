@@ -24,6 +24,10 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+
+            //리소스 이름의 충돌을 피하고자 할 때 유용
+            //동일한 리소스 이름을 가진 여러 모듈을 사용할 때 충돌을 방지
+            resourcePrefix = "dcx_scrty_"
         }
     }
     compileOptions {
@@ -35,7 +39,11 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17.toString()
         //jvmTarget = "1.8"
+
+        //API모드 - 파일 내 모든 클래스와 메서드, 변수에 대해 접근제어자들을 명시하게 만드는 기능
+        //freeCompilerArgs += "-Xexplicit-api=strict"
     }
+
     buildFeatures {
         buildConfig = true
     }
@@ -50,8 +58,8 @@ android {
                 register<MavenPublication>("release") {
                     from(components["release"])
                     groupId = "com.github.younminchan"
-                    artifactId = "lib"
-                    version = "1.0.2"
+                    artifactId = "dcx_scrty"
+                    version = "1.0.3"
                 }
 //                register<MavenPublication>("debug") {
 //                    from(components["debug"])
