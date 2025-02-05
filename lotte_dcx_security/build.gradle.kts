@@ -59,7 +59,7 @@ android {
                     from(components["release"])
                     groupId = "com.github.younminchan"
                     artifactId = "dcx_scrty"
-                    version = "1.0.3"
+                    version = "1.0.5"
                 }
 //                register<MavenPublication>("debug") {
 //                    from(components["debug"])
