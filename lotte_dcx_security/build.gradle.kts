@@ -27,7 +27,7 @@ android {
 
             //리소스 이름의 충돌을 피하고자 할 때 유용
             //동일한 리소스 이름을 가진 여러 모듈을 사용할 때 충돌을 방지
-            resourcePrefix = "dcx_scrty_"
+            //resourcePrefix = "dcx_scrty_"
         }
     }
     compileOptions {
